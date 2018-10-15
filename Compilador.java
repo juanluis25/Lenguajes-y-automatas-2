@@ -97,13 +97,13 @@ public class Compilador extends JFrame {
 			                c.setTitle("compiled file "+abre.getName());
 						}else {
 							if(p.mensaje.equals("Se esperaba un boleano")){
-								JOptionPane.showMessageDialog(c, "Critical error on token: "+p.error+"\nType: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
-							}else if(p.mensaje.equals("Not the same type of variable")){
-								JOptionPane.showMessageDialog(c, "Critical error on tokens: "+p.auxiliar+", " +p.auxiliar2+"\nType: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(c, "Error de token: "+p.error+"\nTipo: " +p.getMensaje(),"Falla",JOptionPane.ERROR_MESSAGE);
+							}else if(p.mensaje.equals("No es el mismo tipo de variable")){
+								JOptionPane.showMessageDialog(c, "Error de tokens: "+p.auxiliar+", " +p.auxiliar2+"\nTipo: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
 								}else{
-							JOptionPane.showMessageDialog(c, "Critical error on token: "+p.getTok()+"\nType: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(c, "Error de tokens: "+p.getTok()+"\nTipo: " +p.getMensaje(),"Falla",JOptionPane.ERROR_MESSAGE);
 							}
-							c.setTitle("I can't proccess this file "+abre.getName());
+							c.setTitle("No se puede abrir este archivo "+abre.getName());
 						}
 					} catch (Exception e2) {			 
 					}			
