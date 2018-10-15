@@ -21,18 +21,18 @@ public class Compilador extends JFrame {
 	File abre;
 	ArbolRecur arbol;
 	private static final long serialVersionUID = 1L;
-	JLabel label=new JLabel("Load a file or type code");
+	JLabel label=new JLabel("Cargar archivo");
 	JTextArea t=new JTextArea();
 	JScrollPane scroll;
-	JButton b2=new JButton ("Compile");
-	JButton b1=new JButton ("Load file");
-	JButton b3=new JButton ("Exit");
+	JButton b2=new JButton ("Compilar");
+	JButton b1=new JButton ("Cargar archivo");
+	JButton b3=new JButton ("Salir");
 	Oy1 o=new Oy1();
 	public static Compilador c;
 
 	public Compilador() {
 		setResizable(false);
-		setTitle("Compiler made by Felipe Mercado");
+		setTitle("Compilador");
 		setVisible(true);
 		setSize(600,500);
 		JPanel j=new JPanel(); 
