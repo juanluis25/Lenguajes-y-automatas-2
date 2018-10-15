@@ -78,25 +78,25 @@ public class Compilador extends JFrame {
 	public class Oy1 implements ActionListener	{
 		public void actionPerformed( ActionEvent e ){
 			//Si "GUARDAR" es el command que le pasamos es porque se habrá pulsado el botón nuevo_bt 
-			if ("Compile".equals(e.getActionCommand())){//				label.setBounds(new Rectangle(200,50,400,21));
+			if ("Compilar".equals(e.getActionCommand())){//				label.setBounds(new Rectangle(200,50,400,21));
 				//System.out.println("compilado\n||-----\n"+t.getText()+"-----||");				//-------------------------Modificar
 				if(t.getText().equals("")){
-					c.setTitle("Empty text box");
+					c.setTitle("Caja de texto vacía");
 					JOptionPane.showMessageDialog(c, "No hay cadenas en este archivo!!!","Está vacío",JOptionPane.ERROR_MESSAGE);
 				}else{
 					try {
 						//Parser p=new Parser(t.getText());
 						Pars p=new Pars(t.getText());
 						if (p.daval()==true) {
-							JOptionPane.showMessageDialog(c, "\tsuccessfully compiled \n"
-									+ "\tthe results are in the next file\nC:/Users/BadMf/Desktop/Resultados.java","Done",JOptionPane.INFORMATION_MESSAGE);
+							JOptionPane.showMessageDialog(c, "\tCompilación exitosa \n"
+									+ "\tLos resultados estan en el siguiente archivo\nC:/Users/BadMf/Desktop/Resultados.java","Done",JOptionPane.INFORMATION_MESSAGE);
 							//label.setText(c.getTitle());
-			                @SuppressWarnings("resource")
+			                @SuppressWarnings("recursos")
 							PrintStream DDescritor = new PrintStream("C:/Users/BadMf/Desktop/Resultados.java");
 			                DDescritor.println(t.getText());
 			                c.setTitle("compiled file "+abre.getName());
 						}else {
-							if(p.mensaje.equals("Expected boolean expression")){
+							if(p.mensaje.equals("Se esperaba un boleano")){
 								JOptionPane.showMessageDialog(c, "Critical error on token: "+p.error+"\nType: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
 							}else if(p.mensaje.equals("Not the same type of variable")){
 								JOptionPane.showMessageDialog(c, "Critical error on tokens: "+p.auxiliar+", " +p.auxiliar2+"\nType: " +p.getMensaje(),"Failure",JOptionPane.ERROR_MESSAGE);
