@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 public class Compilador extends JFrame {
-	//DeclaraciÛn de variables
+	//Declaraci√≥n de variables
 	File abre;
 	ArbolRecur arbol;
 	private static final long serialVersionUID = 1L;
@@ -77,7 +77,7 @@ public class Compilador extends JFrame {
 	final JFileChooser fc = new JFileChooser();
 	public class Oy1 implements ActionListener	{
 		public void actionPerformed( ActionEvent e ){
-			//Si "GUARDAR" es el command que le pasamos es porque se habr· pulsado el botÛn nuevo_bt 
+			//Si "GUARDAR" es el command que le pasamos es porque se habr√° pulsado el bot√≥n nuevo_bt 
 			if ("Compile".equals(e.getActionCommand())){//				label.setBounds(new Rectangle(200,50,400,21));
 				//System.out.println("compilado\n||-----\n"+t.getText()+"-----||");				//-------------------------Modificar
 				if(t.getText().equals("")){
@@ -155,7 +155,7 @@ public class Compilador extends JFrame {
 		} catch (Exception e) {
 			  JOptionPane.showMessageDialog(null,e+"" +
 					     "\nError",
-					     "Check your code!!!",JOptionPane.WARNING_MESSAGE);
+					     "Revisa el c√≥digo!!!",JOptionPane.WARNING_MESSAGE);
 			
 		}
 		
