@@ -94,7 +94,7 @@ public class Compilador extends JFrame {
 			                @SuppressWarnings("recursos")
 							PrintStream DDescritor = new PrintStream("C:/Users/BadMf/Desktop/Resultados.java");
 			                DDescritor.println(t.getText());
-			                c.setTitle("compiled file "+abre.getName());
+			                c.setTitle("Archivo compilado "+abre.getName());
 						}else {
 							if(p.mensaje.equals("Se esperaba un boleano")){
 								JOptionPane.showMessageDialog(c, "Error de token: "+p.error+"\nTipo: " +p.getMensaje(),"Falla",JOptionPane.ERROR_MESSAGE);
@@ -109,12 +109,12 @@ public class Compilador extends JFrame {
 					}			
 				}
 			} 
-			if ("Load file".equals(e.getActionCommand())){
+			if ("Cargar ARCHIVO".equals(e.getActionCommand())){
 				abrirArchivo();
 				//System.out.println("Load file");
 				
 			} 
-			if ("Exit".equals(e.getActionCommand())){
+			if ("Salir".equals(e.getActionCommand())){
 				//System.out.println("Exit");
 				System.exit(0);
 			} 
@@ -130,7 +130,7 @@ public class Compilador extends JFrame {
 			 file.showOpenDialog(this);
 			 /**abrimos el archivo seleccionado*/
 			 abre=file.getSelectedFile();
-			 c.setTitle("Trying to compile "+abre.getName());
+			 c.setTitle("Intentando compilar "+abre.getName());
 			 /**recorremos el archivo, lo leemos para plasmarlo
 			 *en el area de texto*/
 			 
