@@ -82,7 +82,7 @@ public class Compilador extends JFrame {
 				//System.out.println("compilado\n||-----\n"+t.getText()+"-----||");				//-------------------------Modificar
 				if(t.getText().equals("")){
 					c.setTitle("Empty text box");
-					JOptionPane.showMessageDialog(c, "You got no Strings on the text field!!!","Are you crazy mf? this shit empty",JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(c, "No hay cadenas en este archivo!!!","Está vacío",JOptionPane.ERROR_MESSAGE);
 				}else{
 					try {
 						//Parser p=new Parser(t.getText());
