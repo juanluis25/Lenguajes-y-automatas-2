@@ -29,6 +29,10 @@ public class Ar {
 	public Ar() {
 	}
 	public static void main(String[] args) {
+		
+		Compilador ventana = new Compilador();
+	 	ventana.setVisible(true); 
+		
 		ArbolRecur arbol=new ArbolRecur();
 		Nodo2 n=new Nodo2("programa");
 		arbol.raiz=n;
